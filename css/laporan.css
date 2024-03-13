@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E7E7E7;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.sidebar img.logo {
+    max-width: 70%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+.sidebar img.folder-icon {
+    max-width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.folder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.folder-text {
+    margin: 0;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+.subfolder {
+    display: none;
+    margin-left: 15%;
+}
+.approve-button {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 90%;
+    height: 25px;
+    background: #3FE704;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(90, 89, 89, 0.5);
+}
+
+.approve-button:hover {
+    background-color: #55AB20; /* Warna merah saat hover */
+}
+.approve-button img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    margin-left: -10%;
+}
+.approve-button span {
+    color: white;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.search-bar {
+    top: 20px;
+    left: 230px;
+    width: calc(100% - 250px);
+    height: 40px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 230px;
+}
+.search-bar img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.search-bar input {
+    flex: 1;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #0A1D39;
+    background: none;
+    outline: none;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.profile span {
+    font-size: 16px;
+}
+.content {
+    padding: 10px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    bottom: -260px;
+    left: 50%;
+    transform: translateX(-110%);
+    width: 220px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(90, 89, 89, 0.5);
+    margin-left: -20px;
+    cursor: default;
+}
+.popup-content {
+    text-align: center;
+}
+.popup.active {
+    display: block;
+}
+.popup img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+}
+.popup button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e70404;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(90, 89, 89, 0.5);
+}
+.popup button:hover {
+    background-color: #b30000; /* Warna merah saat hover */
+}
+.popup h3 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.folder {
+    transition: box-shadow 0.3s ease;
+}
+.folder:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.new-button {
+    background-color: #e70404; /* Warna merah */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    margin-top: -100px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(90, 89, 89, 0.5);
+    transition: background-color 0.3s;
+}
+
+.new-button:hover {
+    background-color: #b30000;
+}
+
+.content {
+    padding: 10px;
+    margin-left: 240px; /* Adjust this value to ensure proper spacing */
+}
+
+table {
+    width: 98%;
+    border-collapse: collapse;
+    background-color: #f2f2f2; /* Warna latar belakang tabel */
+    border: 1px solid #ddd; /* Warna border */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Warna border */
+    padding: 8px; /* Padding untuk sel */
+    text-align: left; /* Posisi teks dalam sel */
+}
+
+
+th {
+    background-color: #e9ecef; /* Warna latar belakang header tabel */
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Warna latar belakang setiap baris genap */
+}
+
